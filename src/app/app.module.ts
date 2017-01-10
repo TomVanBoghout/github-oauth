@@ -4,10 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { GithubLoginComponent } from './github-login/github-login.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    GithubLoginComponent
   ],
   imports: [
     BrowserModule,
