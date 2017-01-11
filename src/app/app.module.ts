@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { GithubLoginComponent } from './github-login/github-login.component';
 import { GithubService } from './github.service';
 import { GithubAuthenticationComponent } from './github-authentication/github-authentication.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GithubLoginComponent,
-    GithubAuthenticationComponent
+    GithubAuthenticationComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,7 @@ import { GithubAuthenticationComponent } from './github-authentication/github-au
     RouterModule.forRoot([
           {path: 'welcome', component: GithubLoginComponent},
           {path: 'authenticated/', component: GithubAuthenticationComponent},
+          {path: 'home', component: HomeComponent},
           {path: '', redirectTo: 'welcome', pathMatch: 'full'},
           {path: '**', redirectTo: 'welcome', pathMatch: 'full'}
       ]),
